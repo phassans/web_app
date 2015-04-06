@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>Community College Student Registration System</title>
+<script src="js/jquery-min.js"></script>
+<script src="js/polyfill.js"></script>
+<script src="js/students.js"></script>
+<style type="text/css">
+h3 {
+	font-family: Calibri;
+	font-size: 22pt;
+	font-style: normal;
+	font-weight: bold;
+	color: SlateBlue;
+	text-align: center;
+	text-decoration: underline
+}
+
+table {
+	font-family: Calibri;
+	color: black;
+	font-size: 11pt;
+	font-style: normal;
+	text-align:;
+	background-color: #f5deb3;
+	border-collapse: collapse;
+	border: 2px solid navy
+}
+
+table.inner {
+	border: 0px
+}
+
+.isa_info,.isa_success,.isa_warning,.isa_error {
+	margin: 10px 0px;
+	padding: 12px;
+}
+
+.isa_info {
+	color: #00529B;
+	background-color: #BDE5F8;
+}
+
+.isa_success {
+	color: #4F8A10;
+	background-color: #DFF2BF;
+}
+
+.isa_warning {
+	color: #9F6000;
+	background-color: #FEEFB3;
+}
+
+.isa_error {
+	color: #D800p0C;
+	background-color: #FFBABA;
+}
+</style>
+</head>
+
+<body>
+	<div id="container">
+		<div id="ma1inpic1">
+			<h1>Community College Student Registration System</h1>
+		</div>
+
+		<div id="menu">
+			<ul>
+				<li class="menuitem"><a href="index.html">Home</a></li>
+				<li class="menuitem"><a href="add_student.html">Add Students</a></li>
+				<li class="menuitem"><a href="add_course.html">Add Course</a></li>
+				<li class="menuitem"><a href="register_course.html">RegisterCourse</a></li>
+			</ul>
+		</div>
+
+		<div id="content">
+			<div>
+				<h2 style="text-align: center; padding-bottom: 10px;">Student
+					in system</h2>
+				<div id="get_inventory"></div>
+				<div id="fail-msg"
+					style="width: 457px; margin: 0 auto; margin-top: 10px; display: none;"
+					class="isa_error">Replace this text with your own text.</div>
+				<div id="success-msg"
+					style="width: 457px; margin: 0 auto; margin-top: 10px; display: none;"
+					class="isa_success">Replace this text with your own text.</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>
