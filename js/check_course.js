@@ -6,7 +6,7 @@ $(document).ready(function() {
 });
 
 function getInventory(code) {
-	$.getJSON( "http://localhost:7001/StudentLab/api/courses/"+code, function() {
+	$.getJSON( "http://"+host+"StudentLab/api/courses/"+code, function() {
 	})
 	.success(function(data) {
 		if(data.code==200){

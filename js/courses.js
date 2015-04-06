@@ -7,47 +7,10 @@
  * jquery is required
  */
 $(document).ready(function() {
-
 	getInventory();
-
-	$(document.body).on('click', ':button, .DELETE_BTN', function(e) {
-		console.log(this);
-		var $this = $(this)
-		, $tr = $this.closest('tr')
-		, FIRSTNAME = $tr.find('.REG_FIRSTNAME').text()
-		, LASTNAME = $tr.find('.REG_LASTNAME').text()
-		, EMAIL = $tr.find('.REG_EMAIL').text()
-		, obj = {FIRSTNAME : FIRSTNAME, LASTNAME : LASTNAME, EMAIL : EMAIL};
-		deleteInventory(obj);
-	});
 });
-
-function deleteInventory(obj) {
-
-	ajaxObj = {  
-			type: "DELETE",
-			url: "http://localhost:7001/StudentLab/api/courses/",
-			data: JSON.stringify(obj), 
-			contentType:"application/json",
-			error: function(jqXHR, textStatus, errorThrown) {
-				console.log(jqXHR.responseText);
-			},
-			success: function(data) {
-				console.log(data);
-				$('#delete_response').text( data[0].MSG );
-			},
-			complete: function(XMLHttpRequest) {
-				console.log( XMLHttpRequest.getAllResponseHeaders() );
-				getInventory();
-			}, 
-			dataType: "json" //request JSON
-	};
-
-	return $.ajax(ajaxObj);
-}
-
 function getInventory() {
-	$.getJSON( "http://localhost:7001/StudentLab/api/courses", function( data ) {
+	$.getJSON( "http://"+host+"StudentLab/api/courses", function( data ) {
 		var jsondata = data.data;
 		var html_string = "<tr><td>CODE</td><td>NAME</td><td>DEPT</td><td>DESCRIPTION</td><td>PROFESSOR</td><td>PROFESSOR_EMAIL</td><td>SEATS</td><td>TIME</td>" +
 		"<td>REGDATE</td><td>STARTDATE</td><td>INFO</td></tr>";

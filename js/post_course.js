@@ -10,7 +10,6 @@ $(document).ready(function() {
 	//console.log("ready");
 	
 	var $post_example = $('#post_example');
-	
 	/**
 	 * This is for the 2nd Submit button "Submit v2"
 	 * It will do the same thing as Submit above but the api
@@ -27,7 +26,7 @@ $(document).ready(function() {
 		
 		ajaxObj = {  
 			type: "POST",
-			url: "http://localhost:7001/StudentLab/api/courses", 
+			url: "http://"+host+"StudentLab/api/courses", 
 			data: JSON.stringify(jsObj), 
 			contentType:"application/json",
 			error: function(jqXHR, textStatus, errorThrown) {

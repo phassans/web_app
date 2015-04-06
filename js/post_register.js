@@ -10,7 +10,7 @@ $(document).ready(function() {
 	//console.log("ready");
 	var $select = $('#COURSES');
 	$.ajax({
-		  url: 'http://localhost:7001/StudentLab/api/courses',
+		  url: "http://"+host+"StudentLab/api/courses",
 		  dataType:'JSON',
 		  success:function(data){
 		    //clear the current content of the select
@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 		ajaxObj = {  
 				type: "POST",
-				url: "http://localhost:7001/StudentLab/api/register", 
+				url: "http://"+host+"StudentLab/api/register", 
 				data: JSON.stringify(jsObj), 
 				contentType:"application/json",
 				success: function(data) {

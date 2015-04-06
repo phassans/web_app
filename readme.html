@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Student Lab Rest API Documentation</title>
+</head>
+<body>
+<h1>REST API Documentation</h1>
+
+<h2>The StudentLab REST API lives at the /StudentLab/api/ endpoint and responsds to GET, POST, and DELETE.</h2> 
+
+<p>
+<h2>Services</h2>
+
+<h3>1. Student<br>
+2. Course<br>
+3. Register<br></h3>
+</p>
+
+<div style="font-size:15px;">
+<p>
+Note - <br/>
+1. Every student is created by providing a email, password along with other information. Email & password is required to delete student.<br/>
+2. Every course is created by providing professor email, password along with other information. Professor email and password is required to delete course.<br/>
+</p>
+</div>
+
+Student Resource - 
+
+GET - 
+
+Return all students in the system.
+
+/StudentLab/api/students
+
+{
+    "code": "200",
+    "status": "success",
+    "message": "Student data retrieved successfully",
+    "count": 2,
+    "data": [
+        {
+            "FIRSTNAME": "Mark",
+            "LASTNAME": "Anthony",
+            "GENDER": -3.93e-30,
+            "DOB": "1970-01-01 00:00:00.0",
+            "EMAIL": "mark@live.com",
+            "PHONE": "9701234567",
+            "ADDRESS": "123 Street",
+            "CITY": "DENVER",
+            "STATE": "CO",
+            "ZIP": 80123,
+            "COUNTRY": "USA"
+        },
+        {
+            "FIRSTNAME": "Pramod",
+            "LASTNAME": "Shashidhara",
+            "GENDER": -3.93e-30,
+            "DOB": "1988-04-02 00:00:00.0",
+            "EMAIL": "pramodhs@live.com",
+            "PHONE": "4252337574",
+            "ADDRESS": "1939 S Quebec Way",
+            "CITY": "DENVER",
+            "STATE": "CO",
+            "ZIP": 80231,
+            "COUNTRY": "USA"
+        }
+    ]
+}
+
+
+</body>
+</html>

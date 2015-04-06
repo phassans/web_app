@@ -6,7 +6,7 @@ $(document).ready(function() {
 });
 
 function getInventory(email) {
-	$.getJSON( "http://localhost:7001/StudentLab/api/students/"+email, function() {
+	$.getJSON( "http://"+host+"StudentLab/api/students/"+email, function() {
 	})
 	.success(function(data) {
 		if(data.code==200){

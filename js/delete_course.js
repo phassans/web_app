@@ -23,7 +23,7 @@ $(document).ready(function() {
 		
 		ajaxObj = {  
 			type: "DELETE",
-			url: "http://localhost:7001/StudentLab/api/courses", 
+			url: "http://"+host+"StudentLab/api/courses", 
 			data: JSON.stringify(jsObj), 
 			contentType:"application/json",
 			success: function(data) {
